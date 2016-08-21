@@ -19,7 +19,6 @@ class ChallengesController < ApplicationController
 
   def join
     if current_user.challenges.exists?(params[:id])
-      puts "already joined!"
       flash[:alert] = "already joined!"
       redirect_to challenges_path
     else

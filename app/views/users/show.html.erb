@@ -1,5 +1,20 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
-<% @user.challenges.each do |challenge|%>
-  <%=challenge.name%><br>
+
+<div class="progress-display">
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    <% @user.user_challenges.each do |user_challenge|%>
+    <% challenge = user_challenge.challenge %>
+    <%= challenge.name %><br>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= user_challenge.percent_complete %>%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <%end%>
