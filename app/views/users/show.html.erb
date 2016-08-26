@@ -1,0 +1,31 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="progress-display">
+  <div class="container">
+    <% @user.user_challenges.each do |user_challenge|%>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= form_for user_challenge do |f|%>
+             <%= f.label :daily_distance, "Enter Distance" %>
+             <%= f.text_field :daily_distance%>
+             <%= f.submit %>
+             <%end%>
+      </div>
+      <div class="col-sm-6">
+        <% challenge = user_challenge.challenge %>
+        <%= challenge.name %> <%= distance_of_time_in_words(Time.zone.now, Time.zone.now + challenge.number_of_days.days) %><br>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= user_challenge.percent_complete %>%;">
+            <span class="sr-only">60% Complete</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <%= distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
+      </div>
+    </div>
+    <%end%>
+  </div>
+
+</div>

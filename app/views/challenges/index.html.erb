@@ -1,0 +1,7 @@
+<h2> Hello from Challenges</h2>
+<div class="list-group">
+  <% @challenges.each do |challenge|     %>
+<%=    link_to challenge.name, challenge, class: "list-group-item" %>
+
+  <%end%>
+</div>

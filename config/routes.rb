@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
+#<<<<<<< HEAD
   get 'welcome/index'
 
   get 'welcome/about'
+#=======
+  devise_for :users
+
+  get 'welcome/about'
+  get 'welcome/contact'
+  root 'welcome#home'
+
+  resources :challenges do
+    get 'join', on: :member
+  end
+  resources :users
+  resources :user_challenges
+#>>>>>>> old-state
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
