@@ -21,8 +21,10 @@
     <ul>
       <%if user_signed_in? %>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-            <li> <%= link_to "Create new challenge", new_challenge_path %></li>
             <li> <%= link_to "See all the users", users_path %></li>
+            <%if current_user.admin? %>
+                <li> <%= link_to "Create new challenge", new_challenge_path %></li>
+            <%end %>
             <li> <%= link_to "see challenges", challenges_path%> </li>
             <li> <%= link_to "User Page", user_path(current_user)%></li>
         <% else %>
@@ -31,6 +33,7 @@
             <%end %>
     </ul>
     </div>
+    
   </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

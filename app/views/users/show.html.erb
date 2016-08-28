@@ -6,11 +6,18 @@
     <% @user.user_challenges.each do |user_challenge|%>
     <div class="row">
       <div class="col-sm-2">
-        <%= form_for user_challenge do |f|%>
-             <%= f.label :daily_distance, "Enter Distance" %>
-             <%= f.text_field :daily_distance%>
-             <%= f.submit %>
+        <% if user_challenge.user == current_user%>
+            <%= form_for user_challenge do |f|%>
+                 <%= f.label :daily_distance, "Enter Distance" %>
+                 <%= f.text_field :daily_distance%>
+                 <%= f.submit "Enter distance" %>
              <%end%>
+          <%else%>
+
+          <%=link_to "Chek out the challenges to sign up", challenge_path()%>
+          <p>possibly make this link dynamic to go to the specfic challenge page</p>
+
+          <%end%>
       </div>
       <div class="col-sm-6">
         <% challenge = user_challenge.challenge %>
@@ -20,9 +27,17 @@
             <span class="sr-only">60% Complete</span>
           </div>
         </div>
+        <%=challenge.short_description %>
       </div>
       <div class="col-sm-3">
-        <%= distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
+        <%if user_challenge.percent_complete >=100 %>
+          <button type="button" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          </button>
+
+        <% else %>
+        <%=  distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
+        <%end%>
       </div>
     </div>
     <%end%>
