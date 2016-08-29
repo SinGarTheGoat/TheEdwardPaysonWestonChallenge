@@ -1,4 +1,8 @@
 <h2> Welcome to the show kid</h2>
 <%= @challenge.name%>
 <%= @challenge.long_description %>
+<%if  user_signed_in? %>
 <%=link_to "Start this challenge", join_challenge_path(@challenge)%>
+<%else%>
+<%=link_to "Sign up to take theEdward Payson Weston Challenge", new_user_session_path%>
+<%end%>
