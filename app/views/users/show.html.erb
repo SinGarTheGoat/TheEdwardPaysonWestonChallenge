@@ -1,11 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%=current_user.email%>'s Profile</h1>
+
+
+</h1>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+
 
 <div class="progress-display">
   <div class="container">
     <% @user.user_challenges.each do |user_challenge|%>
     <div class="row">
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <% if user_challenge.user == current_user%>
             <%= form_for user_challenge do |f|%>
                  <%= f.label :daily_distance, "Enter Distance" %>
@@ -14,7 +20,8 @@
              <%end%>
           <%else%>
 
-          <%=link_to "Chek out the challenges to sign up", challenge_path()%>
+
+          <%=link_to "Chek out the challenges to sign up", user_challenge.challenge(user_challenge)%>
           <p>possibly make this link dynamic to go to the specfic challenge page</p>
 
           <%end%>
@@ -42,5 +49,9 @@
     </div>
     <%end%>
   </div>
+
+</div>
+
+</div>
 
 </div>

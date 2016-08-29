@@ -1,2 +1,26 @@
-<h1>Welcome#home</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+
+
+<div class="row">
+
+  <h1>Welcome friends to the home page of the <br>"The Edward Payson Weston Challenge!" </h1>
+  <h4>A site dedicated to Americas first great professional athlete.</h4>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <h2>  Here you can,</h2>
+    <h3>
+      <ul>
+        <li>Find about <strong>Edward Payson Weston</strong> and his feats of endurance and speed.</li>
+        <li>Sign up to to compeetet against the man,<strong> Edward Payson Weston</strong> himself.</li>
+         <li>Track you and your friends progress as you all complete your own pedestrian adventure.</li>
+      </ul>
+    </h3>
+      <h2>  The only question is... will you <%=link_to "Sign up", new_user_registration_path %>
+        for the <strong>Edward Payson Weston challenge</strong> </h2>
+        <div class='moustache'>
+          <%=image_tag('EPW-moustache.jpg')%>
+
+        </div>
+   </div >
+    </div>
