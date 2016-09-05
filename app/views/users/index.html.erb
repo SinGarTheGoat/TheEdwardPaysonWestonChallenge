@@ -1,14 +1,12 @@
 <h1>Checkout who else has signed up for the The Edward Payson Weston Challenge</h1>
 <h3>Click on a user to view their progress.</h3>
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-<div class='list-group'>
+    <div class='list-group'>
+        <% @user.each do |user| %>
+        <%= link_to user.trail_name, user, :class => "list-group-item"  %>
+        <%end%>
 
-<% @user.each do |user| %>
-  <%= link_to user.email, user, :class => "list-group-item"  %>
-<%end%>
-
-</div>
-
-   </div >
     </div>
+
+    <%=image_tag('EPW-and-friends.jpg')%>
+</div >
