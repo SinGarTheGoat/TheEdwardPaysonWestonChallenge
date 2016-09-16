@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -46,3 +47,48 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+
+####################### Blocmarks gemfile#######
+# # for authentication of user
+# gem 'devise'
+# # for making css eaiser
+# gem 'bootstrap-sass'
+# # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# gem 'rails', '4.2.6'
+# gem 'rails_admin'
+# #used for authorizing users
+# gem 'pundit'
+#
+# gem 'pg'
+#
+# group :production do
+#
+#   gem 'rails_12factor'
+# end
+#
+# group :development do
+#   gem 'awesome_print'
+#   gem 'web-console', '~> 2.0'
+# #  gem 'sqlite3'
+# end
+#
+# gem 'sass-rails', '~> 5.0'
+# gem 'uglifier', '>= 1.3.0'
+# gem 'coffee-rails', '~> 4.1.0'
+# gem 'jquery-rails'
+# gem 'turbolinks'
+# gem 'bootstrap'
+# gem 'figaro'
+# gem 'pry'
+#
+# group :development, :test do
+#   gem 'pry-rails'
+#   gem 'byebug'
+#   gem 'spring'
+#   gem 'rspec-rails'
+#   gem 'shoulda'
+#   gem 'faker'
+#   gem 'factory_girl_rails'
+#   gem 'dotenv-rails'
+# end

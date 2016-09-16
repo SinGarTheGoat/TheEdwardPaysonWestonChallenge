@@ -1,27 +1,23 @@
-
-<div class="container"
-<div class="row" >
-  <div class=".col-md-6">
-<h2> Hello from Challenges</h2>
-</div>
-</div>
-<div class="row" >
-  <div class=".col-md-6">
-<div class='moustache'>
-  <%=image_tag('EPW-Stands.jpg')%>
-</div>
-</div>
-</div>
-
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-<div class="list-group">
-  <% @challenges.each do |challenge|     %>
-    <%=link_to challenge.name, challenge, class: "list-group-item" %>
-  <%end%>
-</div>
-
-
-   </div >
+<div class="container">
+  <div class="row" >
+    <div class="col-md-6">
+      <h2> Hello from Challenges</h2>
     </div>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid clearfix">
+    <div class="col-md-4">
+      <div class='moustache'>
+        <%=image_tag('EPW-Stands.jpg')%>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="list-group">
+        <% @challenges.each do |challenge|     %>
+        <%=link_to challenge.name, challenge, class: "list-group-item" %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
