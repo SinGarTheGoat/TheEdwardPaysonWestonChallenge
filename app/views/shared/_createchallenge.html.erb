@@ -1,0 +1,29 @@
+
+<%=form_for @challenge do |f|  %>
+<div class='form-group'>
+<%=f.label :name %>
+<%=  f.text_field :name, class: "form-control" %>
+</div>
+
+<div class='form-group'>
+<%=f.label :number_of_days %>
+<%= f.number_field :number_of_days, class: "form-control" %>
+</div>
+
+<div class='form-group'>
+<%=f.label :distance %>
+<%= f.number_field :distance,class: "form-control"%>
+</div>
+
+<div class="form-group">
+<%=f.label :short_description %>
+<%=f.text_field :short_description, class: "form-control"%>
+</div>
+
+<div class="form-group">
+<%=f.label :long_description %>
+<%=f.text_field :long_description, class: "form-control"%>
+<%=f.submit class: 'btn btn-primary'%>
+</div>
+
+<% end%>

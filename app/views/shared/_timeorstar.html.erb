@@ -1,0 +1,8 @@
+<%if user_challenge.percent_complete >=100 %>
+  <button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  </button>
+
+<% else %>
+<%=  distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
+<%end%>
