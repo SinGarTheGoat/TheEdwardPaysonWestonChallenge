@@ -5,8 +5,6 @@ gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -38,6 +36,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
 end
 
 group :development do
@@ -48,47 +49,6 @@ group :development do
   gem 'spring'
 end
 
-
-####################### Blocmarks gemfile#######
-# # for authentication of user
-# gem 'devise'
-# # for making css eaiser
-# gem 'bootstrap-sass'
-# # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# gem 'rails', '4.2.6'
-# gem 'rails_admin'
-# #used for authorizing users
-# gem 'pundit'
-#
-# gem 'pg'
-#
-# group :production do
-#
-#   gem 'rails_12factor'
-# end
-#
-# group :development do
-#   gem 'awesome_print'
-#   gem 'web-console', '~> 2.0'
-# #  gem 'sqlite3'
-# end
-#
-# gem 'sass-rails', '~> 5.0'
-# gem 'uglifier', '>= 1.3.0'
-# gem 'coffee-rails', '~> 4.1.0'
-# gem 'jquery-rails'
-# gem 'turbolinks'
-# gem 'bootstrap'
-# gem 'figaro'
-# gem 'pry'
-#
-# group :development, :test do
-#   gem 'pry-rails'
-#   gem 'byebug'
-#   gem 'spring'
-#   gem 'rspec-rails'
-#   gem 'shoulda'
-#   gem 'faker'
-#   gem 'factory_girl_rails'
-#   gem 'dotenv-rails'
-# end
+group :production do
+  gem 'pg'
+end
