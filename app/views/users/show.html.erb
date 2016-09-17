@@ -28,7 +28,7 @@
       </div>
       <div class="col-sm-6">
         <% challenge = user_challenge.challenge %>
-        <%= challenge.name %> <%= distance_of_time_in_words(Time.zone.now, Time.zone.now + challenge.number_of_days.days) %><br>
+        <%= challenge.name %>.       you have <%= distance_of_time_in_words(Time.zone.now, Time.zone.now + challenge.number_of_days.days)%> to complete this challenge<br>
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%= user_challenge.percent_complete %>%;">
             <span class="sr-only">60% Complete</span>
