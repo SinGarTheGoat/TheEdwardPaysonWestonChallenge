@@ -1,0 +1,8 @@
+<%if user_signed_in? %>
+    Well what are you waiting for partner? Get a move on and get on the trail
+<%else%>
+    The only question is... will you
+    <%=link_to "Sign up", new_user_registration_path %>
+
+<%end%>
+for the <strong>Edward Payson Weston challenge</strong>

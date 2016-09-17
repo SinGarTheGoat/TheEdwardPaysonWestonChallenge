@@ -4,5 +4,5 @@
   </button>
 
 <% else %>
-<%=  distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
+  <%= distance_of_time_in_words(Time.now,user_challenge.created_at + user_challenge.challenge.number_of_days.days)%>
 <%end%>
