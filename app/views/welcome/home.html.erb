@@ -16,8 +16,16 @@
          <li>Track you and your friends progress as you all complete your own pedestrian adventure.</li>
       </ul>
     </h3>
-      <h2>  The only question is... will you <%=link_to "Sign up", new_user_registration_path %>
-        for the <strong>Edward Payson Weston challenge</strong> </h2>
+      <h2>
+        <%if user_signed_in? %>
+            Well what are you waiting for partner? Get a move on and get on the trail
+        <%else%>
+            The only question is... will you
+            <%=link_to "Sign up", new_user_registration_path %>
+
+        <%end%>
+        for the <strong>Edward Payson Weston challenge</strong>
+      </h2>
         <div class='moustache'>
           <%=image_tag('EPW-moustache.jpg')%>
 
