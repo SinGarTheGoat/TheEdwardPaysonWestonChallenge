@@ -3,7 +3,7 @@
 <div class="jumbotron jumbotron-fluid">
     <div class='list-group'>
         <% @user.each do |user| %>
-        <%= link_to user.trail_name, user, :class => "list-group-item"  %>
+            <%= link_to user.trail_name, user, :class => "list-group-item"  %>
         <%end%>
     </div>
     <%=image_tag('EPW-and-friends.jpg')%>
