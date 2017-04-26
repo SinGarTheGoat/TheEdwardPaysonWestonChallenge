@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'devise'
+ruby '2.2.4' #added to make heroku work
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
