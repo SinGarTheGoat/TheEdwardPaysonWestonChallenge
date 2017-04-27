@@ -10,6 +10,9 @@ a{
 a:hover {
   color: #A82310;
 }
+a:active {
+    color: purple;
+}
 .body{
   background-color: #D8C7B5;
 
@@ -35,6 +38,6 @@ font-size: x-large;
 
 
 .jumbotron{
-  background-color: rgb(216,199,181);
-  border: 5px solid red;
+  background-color: #BE946C;
+  border: 5px solid  #A82310;
 }
