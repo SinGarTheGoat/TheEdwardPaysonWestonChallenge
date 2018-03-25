@@ -13,7 +13,7 @@ a:hover {
 a:active {
     color: purple;
 }
-.body{
+body{
   background-color: #D8C7B5;
 
 
@@ -40,4 +40,7 @@ font-size: x-large;
 .jumbotron{
   background-color: #BE946C;
   border: 5px solid  #A82310;
+  display: flex;
+  justify-content: center;
+   // overflow: auto;
 }
